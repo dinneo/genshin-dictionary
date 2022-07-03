@@ -25,22 +25,13 @@
 }
 </i18n>
 
-<script>
-import { defineComponent, useContext } from "@nuxtjs/composition-api";
+<script setup>
 import { storeToRefs } from "pinia";
 import { useDictionaryStore } from "~/store/index.js";
 
-export default defineComponent({
-  setup() {
-    const { $pinia } = useContext();
-    const store = useDictionaryStore($pinia);
-    const { searchResults } = storeToRefs(store);
-
-    return {
-      searchResults,
-    };
-  },
-});
+const { $pinia } = useNuxtApp();
+const store = useDictionaryStore($pinia);
+const { searchResults } = storeToRefs(store);
 </script>
 
 <style lang="scss" scoped>

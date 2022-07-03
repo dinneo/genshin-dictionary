@@ -3,7 +3,7 @@
     <span class="results__langname results__translation-item">{{ langName }}: </span>
     <div class="results__translation-item">
       <div class="results__ja">
-        <span :lang="langCode" :data-e2e="langCode">{{ word }}</span>
+        <span :lang="lang" :data-e2e="lang">{{ word }}</span>
         <span v-if="kana" class="results__pronunciation-ja">({{ kana }})</span>
       </div>
     </div>
@@ -11,44 +11,34 @@
 </template>
 
 <script>
-import { defineComponent, useContext } from "@nuxtjs/composition-api";
-
-export default defineComponent({
-  props: {
-    lang: {
-      type: String,
-      required: true,
-      validator(val) {
-        return [ "en", "ja", "zh-CN" ].includes(val);
-      },
-    },
-    word: {
-      type: String,
-      required: true,
-    },
-    kana: {
-      type: String,
-      default: "",
+const props = defineProps({
+  lang: {
+    type: String,
+    required: true,
+    validator(val) {
+      return [ "en", "ja", "zh-CN" ].includes(val);
     },
   },
-  setup(props) {
-    const { i18n } = useContext();
-    let langName;
-
-    if (props.lang === "en") {
-      langName = i18n.t("langNameEn");
-    } else if (props.lang === "ja") {
-      langName = i18n.t("langNameJa");
-    } else if (props.lang === "zh-CN") {
-      langName = i18n.t("langNameZhCN");
-    }
-
-    return {
-      langCode: props.lang,
-      langName,
-    };
+  word: {
+    type: String,
+    required: true,
+  },
+  kana: {
+    type: String,
+    default: "",
   },
 });
+
+const { i18n } = useNuxtApp();
+let langName;
+
+if (props.lang === "en") {
+  langName = i18n.t("langNameEn");
+} else if (props.lang === "ja") {
+  langName = i18n.t("langNameJa");
+} else if (props.lang === "zh-CN") {
+  langName = i18n.t("langNameZhCN");
+}
 </script>
 
 <style lang="scss" scoped>
