@@ -12,16 +12,16 @@
   },
   "homepage": "https://genshin-dictionary.com",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt dev",
     "build": "nuxt build --fail-on-error",
-    "start": "nuxt start",
+    "start": "node .output/server/index.mjs",
     "test": "jest && playwright test",
     "lint": "eslint --ext .js,.mjs,.cjs,.ts,.vue --ignore-path .gitignore .",
     "postinstall": "node ./scripts/postinstall.mjs && npm list @playwright/test && playwright install || echo 'Playwright installation skipped.'"
   },
   "dependencies": {
-    "@nuxtjs/composition-api": "^0.33.0",
     "@nuxtjs/i18n": "^7.2.0",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sentry": "^6.0.0",
@@ -31,7 +31,7 @@
     "klona": "^2.0.4",
     "lodash": "^4.17.21",
     "luxon": "^3.0.1",
-    "nuxt": "^2.14.6",
+    "nuxt": "^3.0.0-rc.12",
     "pinia": "^2.0.13",
     "sass": "^1.32.10",
     "sass-loader": "^10.1.1"
