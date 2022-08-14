@@ -117,7 +117,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/i18n",
     "@nuxtjs/robots",
-    "@nuxtjs/sentry",
+    // "@nuxtjs/sentry",
     "@nuxtjs/sitemap",
     "@pinia/nuxt",
   ],
@@ -206,12 +206,12 @@ export default defineNuxtConfig({
     }),
   },
 
-  sentry: {
-    dsn: "https://1588b1ae11f340479b57e3913b92d72f@o287069.ingest.sentry.io/5887130",
-    config: {
-      environment: process.env.SERVER_ENV || "local",
-    },
-  },
+  // sentry: {
+  //   dsn: "https://1588b1ae11f340479b57e3913b92d72f@o287069.ingest.sentry.io/5887130",
+  //   config: {
+  //     environment: process.env.SERVER_ENV || "local",
+  //   },
+  // },
 
   sitemap: async () => ({
     hostname: "https://genshin-dictionary.com",
