@@ -131,7 +131,7 @@
 </template>
 
 <script setup>
-import tags from "~/static/dataset/tags.json";
+import tags from "~/public/dataset/tags.json";
 
 const { i18n } = useNuxtApp();
 const title = `${ i18n.t("opendataTitle") } | ${ i18n.t("siteTitle") }`;

@@ -59,7 +59,7 @@
 </template>
 
 <script setup>
-import words from "~/static/dataset/words.json";
+import words from "~/public/dataset/words.json";
 
 const { i18n } = useContext();
 const title = `${i18n.t("aboutTitle")} | ${i18n.t("siteTitle")}`;

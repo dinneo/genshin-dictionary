@@ -1,7 +1,7 @@
 import TerserPlugin from "terser-webpack-plugin";
 
-import words from "./static/dataset/words.json";
-import tags from "./static/dataset/tags.json";
+import words from "./public/dataset/words.json";
+import tags from "./public/dataset/tags.json";
 
 export default async () => {
   async function routes() {
