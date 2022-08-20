@@ -14,6 +14,13 @@ async function routes() {
 }
 
 export default defineNuxtConfig({
+  // ▼▼ Workaround for Nuxt 3 bug ▼▼
+  // @see https://github.com/nuxt/framework/issues/1151#issuecomment-983531703
+  alias: {
+    tslib: "tslib/tslib.es6.js",
+  },
+  // ▲▲ Workaround for Nuxt 3 bug ▲▲
+
   ssr: true,
   components: true,
 
