@@ -69,7 +69,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/robots",
     // "@nuxtjs/sentry",
-    "@nuxtjs/sitemap",
+    "@funken-studio/sitemap-nuxt-3",
     "@pinia/nuxt",
   ],
 
