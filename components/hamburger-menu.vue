@@ -28,14 +28,14 @@
           Languages
         </h2>
         <div class="menu__languages-list">
-          <span
+          <a
             v-for="locale in $i18n.locales"
             :key="locale.code"
             class="menu__languages-item"
-            @click.prevent.stop="$i18n.setLocale(locale.code)"
+            :href="switchLocalePath(locale.code)"
           >
             {{ locale.name }}
-          </span>
+          </a>
         </div>
 
         <div class="menu__bottomline">
@@ -80,6 +80,8 @@ const open = ref(false);
 //
 // event handlers
 //
+const localePath = useLocalePath();
+const switchLocalePath = useSwitchLocalePath();
 const toggleMenu = (evt) => {
   open.value = evt.target.checked;
 };

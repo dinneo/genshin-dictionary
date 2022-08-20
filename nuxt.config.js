@@ -102,6 +102,7 @@ export default defineNuxtConfig({
       redirectOn: "no prefix",
     },
     vueI18n: {
+      legacy: false,
       fallbackLocale: "en",
       messages: {
         en: {

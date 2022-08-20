@@ -34,6 +34,10 @@
 }
 </i18n>
 
+<script setup>
+const localePath = useLocalePath();
+</script>
+
 <style lang="scss" scoped>
 @use "~/assets/styles/variables.scss" as vars;
 
