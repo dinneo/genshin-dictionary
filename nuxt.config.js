@@ -1,5 +1,3 @@
-import TerserPlugin from "terser-webpack-plugin";
-
 import words from "./public/dataset/words.json";
 import tags from "./public/dataset/tags.json";
 
@@ -77,31 +75,6 @@ export default defineNuxtConfig({
 
   css: [ "~/assets/styles/global.scss" ],
 
-  build: {
-    optimization: {
-      splitChunks: {
-        chunks: "all",
-      },
-      sideEffects: false,
-      usedExports: true,
-      // Do not make symbol names unreadable for performance analysis
-      minimizer: [ new TerserPlugin({
-        terserOptions: {
-          compress: {
-            keep_classnames: true,
-            keep_fargs: true,
-            keep_fnames: true,
-          },
-          mangle: {
-            keep_classnames: true,
-            keep_fnames: true,
-          },
-          keep_classnames: true,
-          keep_fnames: true,
-        },
-      }) ],
-    },
-  },
   generate: {
     fallback: "404.html",
     routes,
