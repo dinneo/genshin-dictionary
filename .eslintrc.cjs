@@ -6,6 +6,7 @@ module.exports = {
 
   globals: {
     createError: "readonly",
+    defineEventHandler: "readonly",
     defineNuxtConfig: "readonly",
     defineNuxtRouteMiddleware: "readonly",
     onMounted: "readonly",
