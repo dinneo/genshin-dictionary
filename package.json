@@ -33,8 +33,7 @@
     "luxon": "^3.0.1",
     "nuxt": "^3.0.0-rc.12",
     "pinia": "^2.0.13",
-    "sass": "^1.32.10",
-    "sass-loader": "^10.1.1"
+    "sass": "^1.32.10"
   },
   "devDependencies": {
     "@playwright/test": "^1.14.1",
