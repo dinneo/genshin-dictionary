@@ -2,8 +2,6 @@ module.exports = {
   root: true,
   extends: "xicri/vue+js",
 
-  ignorePatterns: [ "*.json", "*.json5" ],
-
   globals: {
     createError: "readonly",
     defineNuxtConfig: "readonly",
