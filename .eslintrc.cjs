@@ -1,10 +1,21 @@
 module.exports = {
   root: true,
-  extends: [
-    "xicri/nuxt+js",
-  ],
+  extends: "xicri/vue+js",
 
   ignorePatterns: [ "*.json", "*.json5" ],
+
+  globals: {
+    createError: "readonly",
+    defineNuxtConfig: "readonly",
+    defineNuxtRouteMiddleware: "readonly",
+    onMounted: "readonly",
+    useContext: "readonly",
+    useHead: "readonly",
+    useLazyAsyncData: "readonly",
+    useNuxtApp: "readonly",
+    useRoute: "readonly",
+    ref: "readonly",
+  },
 
   rules: {
     "vue/multi-word-component-names": "off",
